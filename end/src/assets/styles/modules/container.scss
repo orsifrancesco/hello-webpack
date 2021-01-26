@@ -1,0 +1,14 @@
+.container {
+
+  margin: 0 auto;
+  width: calc(100% - 160px);
+  padding: 0 10px;
+  position: relative;
+
+  @include atSmall {
+
+    width: calc(100% - 40px);
+
+  }
+
+}
