@@ -1,0 +1,23 @@
+.button {
+
+    padding: 12px 24px;
+    color: white;
+    background-color: $mainColor;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    display: inline-block;
+    margin: 5px 3px;
+    transition: .3s;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+
+    &--v2 {
+
+        color: #333;
+        background-color: white;
+
+    }
+
+}
