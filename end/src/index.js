@@ -12,8 +12,6 @@ test();
 const isLive = location.hostname != 'localhost';
 const apiUrl = isLive ? process.env.APIURL : process.env.APIURLDEBUG;
 
-$(window).on('load', () => { loaded(); });
-
 $(window).scroll(() => { scroll(); });
 
 $(window).resize(() => { resize(); });
@@ -21,6 +19,16 @@ $(window).resize(() => { resize(); });
 alert = function (text) { alertEl(text); }
 confirm = function (text, callback) { alertEl(text, callback); }
 
-if (isLive) { alert('it is live!! ' + apiUrl); }
+$(window).on('load', () => {
+
+    loaded();
+
+    if (isLive) {
+        setTimeout(() => {
+            alert('it is live!! ' + apiUrl);
+        }, 1000);
+    }
+
+});
 
 if (module.hot) { module.hot.accept() }
