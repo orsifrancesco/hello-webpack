@@ -1,0 +1,70 @@
+#alert {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(.8);
+    background-color: #262729;
+    color: white;
+    padding: 40px 20px 35px;
+    width: 480px;
+    min-height: 100px;
+    z-index: 99999;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 24px;
+    transition: .5s;
+	opacity: 0;
+    visibility: hidden;
+
+	.text {
+
+		padding-bottom: 20px;
+		max-height: 240px;
+		overflow: auto;
+
+	}
+
+	@media (max-width: 640px) {
+
+		width: 320px;
+
+	}
+
+	&:before {
+
+		content: '';
+		display: block;
+		margin: 0 auto 20px;
+		width: 100px;
+        height: 100px;
+        
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: white;
+        mask-image: url(../images/alert/ok.svg);
+
+	}
+
+	html.show-alert & {
+
+		transform: translate(-50%,-50%) scale(1);
+		opacity: 1;
+		visibility: visible;
+
+	}
+
+	.buttons-container {
+
+		&--confirm { display: none; }
+		html.show-alert--confirm & { display: none; }
+		html.show-alert--confirm &--confirm { display: block; }
+
+	}
+
+	.button {
+
+	}
+
+}

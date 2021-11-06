@@ -5,6 +5,8 @@ import config from '../js/config';
 
 const router = new Navigo('/');
 
+const folderPath = process.env.APIPATH;
+
 function ajaxContent({ url }) {
 
     const content = '.content .container';
@@ -37,7 +39,7 @@ function staticContent(children) {
 
 }
 
-router.on('/', function () {
+router.on(`${folderPath}/`, function () {
     console.log('Home!!!');
     staticContent(`
     
@@ -54,7 +56,7 @@ router.on('/', function () {
     `);
 });
 
-router.on('/hello', function () {
+router.on(`${folderPath}/hello`, function () {
     console.log('Hello!!!');
     staticContent(`
     
@@ -68,7 +70,7 @@ router.on('/hello', function () {
     `);
 });
 
-router.on('/test', function () {
+router.on(`${folderPath}/test`, function () {
     console.log('Test!!!');
     ajaxContent({ url: config.endpoints.test });
 });

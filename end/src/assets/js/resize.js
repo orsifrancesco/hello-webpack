@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+
 const resize = function () {
 
     console.log(

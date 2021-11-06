@@ -1,6 +1,6 @@
 # hello-webpack
 
-Simply empty webpack package.
+Simply empty "Hello World" webpack package.
 
 ## Installation
 
@@ -13,7 +13,7 @@ $ npm run build
 
 ## Demo
 
-[https://devd2i.co/hello-webpack/](https://devd2i.co/hello-webpack/)
+[https://orsi.me/hello-webpack/](https://orsi.me/hello-webpack/)
 
 ## License
 
